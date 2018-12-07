@@ -8,6 +8,8 @@
     "@types/react-dom": "^16.0.10",
     "awesome-typescript-loader": "^5.2.1",
     "css-loader": "^1.0.1",
+    "csstips": "^0.3.0",
+    "csx": "^9.0.0",
     "express": "^4.16.4",
     "global": "^4.3.2",
     "react": "^16.6.3",
@@ -15,13 +17,16 @@
     "react-scripts": "2.1.1",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
+    "ts-loader": "^5.3.1",
     "typescript": "^3.1.6",
+    "typestyle": "^2.0.1",
     "typings-for-css-modules-loader": "^1.7.0",
     "webpack": "^4.26.1"
   },
   "scripts": {
-    "start": "ts-node ./src/Main.ts",
-    "experiment": "ts-node ./src/Experiment.ts"
+    "open": "open -a \"Google Chrome\" ./public/index.html",
+    "build": "yarn webpack --mode=development --watch --open",
+    "start:dev": "yarn build & wait & ts-node-dev ./Server.ts"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-import App from './App'
+import FeedComponent from './routes/feed/Feed'
 
 ReactDOM.render(
-    <App />,
+    <FeedComponent/>,
     document.getElementById("root")
 );

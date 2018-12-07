@@ -1,8 +1,12 @@
 module.exports = {
-  entry: './src/frontend/index.tsx',
+  entry: './src/Index.tsx',
   output: {
     filename: 'bundle.js',
     path: __dirname + '/dist',
+  },
+
+  node: {
+    fs: 'empty'
   },
 
   // Enable sourcemaps for debugging webpack's output.
@@ -20,23 +24,6 @@ module.exports = {
 
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
-
-      {
-        test: /\.css$/,
-        use: [
-          require.resolve('style-loader'),
-          {
-            loader: require.resolve('typings-for-css-modules-loader'),
-            options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
-              namedExport: true,
-              camelCase: true
-            },
-          }
-        ]
-      }
     ],
   },
 };
