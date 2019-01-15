@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Logo from './Logo';
 
 class Layout extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class Layout extends React.Component {
           />
           <title>Bragger</title>
         </Head>
+        <Logo/>
         {this.props.children}
       </div>
     );
